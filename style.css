@@ -1,0 +1,88 @@
+#modal-select {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.show-modal-select {
+  display: flex !important;
+}
+.m-select-content {
+  width: 80%;
+  height: auto;
+  background: rgb(135, 142, 144);
+  font-family: calibri;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.m-select-content .select {
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+.m-select-content .title {
+  color: rgb(169, 232, 169);
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.m-select-content .option {
+  color: #ffffff;
+  padding: 0.4rem 2rem;
+  cursor: pointer;
+  transition:all .2s ease;
+}
+.m-select-content .options{
+    opacity: 1;
+    transition: all .4s ease;
+}
+.m-select-content .option.selected {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.m-select-content .option:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.cerrar-modal-select .select {
+    overflow: hidden !important;
+    animation-name: cerrar;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(.2,.72,.3,1.1);
+    display: block;
+    max-height: 100vh;
+    animation-fill-mode: forwards;
+}
+.cerrar-modal-select .options{
+    opacity: 0 !important;
+}
+.cerrar-modal-select .title {
+    color: rgb(169, 232, 169) !important;
+}
+
+@keyframes cerrar {
+  from {
+    max-height: 100vh;
+    opacity: 1;
+  }
+  to {
+    max-height: 35px;
+    background-color: #1d456f;;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
