@@ -1,0 +1,15 @@
+{
+
+    "name": "modal-select",
+    "version": "1.0.0",
+    "description": "a modal select",
+    "style": "style.css",
+    "main": "style.css",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbelLLontop/modal-select-js.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
